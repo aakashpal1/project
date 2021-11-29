@@ -1,0 +1,42 @@
+<!-- <p>candidate-details works!</p> -->
+<h3>Personal Details</h3>
+<div class="card-body">
+    <form [formGroup]="personalForm">
+        <input type="text" placeholder="Name" formControlName="name" name="name" class="form-control" />{{apiResponse.name}}
+        <input type="text" placeholder="address" formControlName="address" name="address" class="form-control" />{{apiResponse.address}}
+        <input type="text" placeholder="phone" formControlName="phone" name="phone" class="form-control" />
+        <input type="text" placeholder="email" formControlName="email" name="email" class="form-control" />
+        <input type="text" placeholder="gender" formControlName="gender" name="gender" class="form-control" />
+        <input type="text" placeholder="hobbies" formControlName="hobbies" name="hobbies" class="form-control" />
+    </form>
+</div>
+
+<h3>Education</h3>
+<div class="card-body">
+    <form [formGroup]="educationForm">
+        <input type="text" placeholder="institute" formControlName="institute" name="institute" class="form-control" />
+        <input type="text" placeholder="degree" formControlName="degree" name="degree" class="form-control" />
+        <input type="text" placeholder="percentage" formControlName="percentage" name="percentage" class="form-control" />
+        <input type="text" placeholder="pass_out_year" formControlName="pass_out_year" name="pass_out_year" class="form-control" />
+    </form>
+</div>
+
+<h3>Skills</h3>
+<div class="card-body">
+    <form [formGroup]="skillsForm">
+        <input type="text" placeholder="name" formControlName="name" name="name" class="form-control" />
+        <input type="text" placeholder="experience" formControlName="experience" name="experience" class="form-control" />
+    </form>
+</div>
+
+<h3>Experience</h3>
+<div class="card-body">
+    <form [formGroup]="experienceForm">
+        <input type="text" placeholder="company" formControlName="company" name="company" class="form-control" />
+        <input type="text" placeholder="project" formControlName="project" name="project" class="form-control" />
+        <input type="text" placeholder="role" formControlName="role" name="role" class="form-control" />
+        <input type="text" placeholder="team_size" formControlName="team_size" name="team_size" class="form-control" />
+        <input type="text" placeholder="duration_from" formControlName="duration_from" name="duration_from" class="form-control" />
+        <input type="text" placeholder="duration_to" formControlName="duration_to" name="duration_to" class="form-control" />
+    </form>
+</div>

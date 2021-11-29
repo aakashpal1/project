@@ -1,0 +1,38 @@
+<div class="container" style="max-width: 100%">
+  <h2 class="text-center mb-5">Candidate</h2>
+
+  <div *ngIf="isLoggedin === false">
+    <div>
+      <button type="button" (click)="loginWithGoogle()" class="btn btn-danger">Login with Google Account</button>
+    </div>
+  </div>
+<!-- ======================================================================================================================= -->
+  <!-- <div *ngIf="isLoggedin === true">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" [value]="socialUser.firstName" id="firstname" readonly>
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" [value]="socialUser.lastName" id="lastname" readonly>
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" [value]="socialUser.email" id="email" readonly>
+    </div>
+
+    <button type="button" (click)="logOut()" class="btn btn-primary">Log Out</button>
+  </div>
+</div> -->
+<div *ngIf="isLoggedin === true">
+  <mat-drawer-container>
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+      <!-- <mat-drawer mode="side" opened="true"> -->
+      <app-sidenav></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

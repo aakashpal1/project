@@ -1,0 +1,100 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Add Candidate</div>
+    <div class="page__content shadow p-3 position-relative">
+        <div class="page__content-data position-absolute text-center">
+            <!-- ========================================== -->
+            <div class="m-4">
+
+
+                <div class="accordion" id="myAccordion">
+                    <form [formGroup]="personalForm">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne">Personal Details</button>
+                            </h2>
+                            <!-- <div *ngFor="let item of apiResponse"> -->
+                            <!-- <img [src]="item.profile_picture" alt=""> -->
+                            <!-- <h2>{{item.name}}</h2>  -->
+
+                            <!-- </div> -->
+
+                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                <div class="card-body">
+                                    <input class="form-control" placeholder="Profile picture" formControlName="profile_picture" name="profile_picture" type="file" multiple />
+                                    <input type="text" placeholder="Name" formControlName="name" name="name" class="form-control" />
+                                    <input type="text" placeholder="Address" formControlName="address" name="address" class="form-control" />
+                                    <input type="text" placeholder="Phone" formControlName="phone" name="phone" class="form-control" />
+                                    <input type="email" placeholder="Email" formControlName="email" name="email" class="form-control" />
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio1" value="option1" />
+                                        <label class="form-check-label" style="font-size: 21px;" for="inlineRadio1">Male</label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="gender" name="gender" id="inlineRadio2" value="option2" />
+                                        <label class="form-check-label" style="font-size: 21px;" for="inlineRadio2">Female</label>
+                                    </div>
+                                    <input type="text" placeholder="Hobbies" name="hobbies" class="form-control" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+                    <form [formGroup]="educationForm">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">Education</button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+                                <div class="card-body">
+                                    <input type="text" placeholder="Name of School/Collage/Institute" formControlName="institute" name="institute" class="form-control" />
+                                    <input type="text" placeholder="Degree" name="degree" formControlName="degree" class="form-control" />
+                                    <input type="text" placeholder="Percentage" formControlName="percentage" name="percentage" class="form-control" />
+                                    <input type="text" placeholder="Year of graduation" formControlName="pass_out_year" name="pass_out_year" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form [formGroup]="skillsForm">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree">Skills</button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                <div class="card-body">
+                                    <input type="text" placeholder="Name of Skill" formControlName="name" name="name" class="form-control" />
+                                    <input type="text" placeholder="Experience in months" formControlName="experience" name="experience" class="form-control" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <form [formGroup]="experienceForm">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour">Experience</button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                                <div class="card-body">
+                                    <input type="text" placeholder="Name of the company" formControlName="company" name="company" class="form-control" />
+                                    <input type="text" placeholder="Name of the project" formControlName="project" name="project" class="form-control" />
+                                    <input type="text" placeholder="Role" formControlName="role" name="role" class="form-control" />
+                                    <input type="text" placeholder="Team Size" formControlName="team_size" name="team_size" class="form-control" />
+                                    <input type="date" placeholder="Duration From" formControlName="duration_from" name="duration_from" class="form-control" />
+                                    <input type="date" placeholder="Duration To" formControlName="duration_to" name="duration_to" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <button (click)="addAlias()" type="button">Save</button>
+                </div>
+
+
+            </div>
+            <!-- ========================================= -->
+        </div>
+    </div>
+</div>
